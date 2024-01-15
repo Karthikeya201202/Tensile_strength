@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tensile strength Predictor</title>
+    <style>
+          body {
+            /* Set background gradient with reduced intensity */
+            background: linear-gradient(to bottom, #d18bd1, #8c8cff);
+            margin: 20px; /* Remove default margin to use the full viewport */
+            height: 150vh; /* Make sure the container takes the full height of the viewport */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+          h1 {
+            margin-top: 20px; /* Add some space at the top */
+            color: #000; /* Set text color to white */
+        }
+
+
+        /* Style the container for your input elements */
+        .input-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Use rgba to control the opacity */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect */
+        }
+
+        /* Style your input elements */
+        input {
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tensile Strength Predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>Force</label><br>
+        <input type="text" name="Force"><br><br>
+
+        <label>Depth</label><br>
+        <input type="text" name="Depth"><br><br>
+
+        <label>Hole Radius</label><br>
+        <input type="text" name="Hole Radius"><br><br>
+
+        <label>Circle Radius</label><br>
+        <input type="text" name="Circle Radius"><br><br>
+
+        <label>Hole Angle</label><br>
+        <input type="text" name="Hole Angle"><br><br>
+
+        <label>Width</label><br>
+        <input type="text" name="Width"><br><br>
+
+        <label>Length</label><br>
+        <input type="text" name="Length"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>
