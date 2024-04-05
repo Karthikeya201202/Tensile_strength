@@ -12,3 +12,5 @@ seeds were utilized in the TPOT code in order to ensure that the accuracy of the
 AutoKeras is an open-source library that automates the process of neural network architecture search, hyperparameter tuning, and model optimization. It is designed to simplify the complex and time-consuming task of manually designing and fine-tuning neural network architectures. AutoKeras is built on top of TensorFlow and Keras, making it easy to integrate into existing deep learning workflows.
  ## ANN
  Ann with 2 hidden layers and Relu as activation function was used for prediction.
+ ### The app is live at:
+  https://tensile-strength-1.onrender.com
